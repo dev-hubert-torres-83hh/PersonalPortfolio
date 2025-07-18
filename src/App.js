@@ -22,7 +22,7 @@ function Header() {
       <div className="mb-6">
         {/* Profile Image - Corrected alt text */}
         <img
-          src="Screenshot_1.jpg" // Using the provided image filename
+          src="screenshot_1.jpg" // Using the provided image filename
           alt="Hubert Torres Pozo" // Removed 'Imagen'
           className="w-40 h-40 rounded-full mx-auto object-cover shadow-lg border-4 border-white"
         />
