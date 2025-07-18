@@ -13,7 +13,7 @@ function App() {
       <Footer />
     </div>
   );
-}
+} 
 
 // Header Component
 function Header() {
