@@ -13,17 +13,17 @@ function App() {
       <Footer />
     </div>
   );
-} 
+}
 
 // Header Component
 function Header() {
   return (
     <header className="text-center mb-16">
       <div className="mb-6">
-        {/* Profile Image */}
+        {/* Profile Image - Corrected alt text */}
         <img
           src="Screenshot_1.jpg" // Using the provided image filename
-          alt="Hubert Torres Pozo"
+          alt="Hubert Torres Pozo" // Removed 'Imagen'
           className="w-40 h-40 rounded-full mx-auto object-cover shadow-lg border-4 border-white"
         />
       </div>
@@ -88,9 +88,10 @@ function FeaturedProject() {
             <h5 className="font-bold text-lg text-blue-800 mb-2">IoT and Hardware</h5>
             <ul className="list-disc list-inside text-sm space-y-1">
               <li><strong className="font-medium">Raspberry Pi:</strong> Automatic control devices.</li>
-              <li><strong className="font-medium">Weight Sensors:</strong> For real-time inventory monitoring.</li>
+              <li><strong className="font-medium">Sensores de Peso:</strong> For real-time inventory monitoring.</li>
             </ul>
-            <img src="https://placehold.co/400x200/E0F2FE/0284C7?text=Raspberry+Pi+Image" alt="Raspberry Pi with Sensors Image" className="mt-4 rounded-md shadow-md w-full h-auto" />
+            {/* Corrected alt text */}
+            <img src="https://placehold.co/400x200/E0F2FE/0284C7?text=Raspberry+Pi+Device" alt="Raspberry Pi Device with Sensors" className="mt-4 rounded-md shadow-md w-full h-auto" />
           </div>
           <div className="p-4 bg-green-50 rounded-lg shadow-sm">
             <h5 className="font-bold text-lg text-green-800 mb-2">Backend and Cloud</h5>
@@ -99,7 +100,8 @@ function FeaturedProject() {
               <li><strong className="font-medium">Azure Kubernetes:</strong> Cluster for microservices.</li>
               <li><strong className="font-medium">Microsoft SQL Server (Serverless):</strong> OLTP and DWH databases.</li>
             </ul>
-            <img src="https://placehold.co/400x200/E0F2FE/0284C7?text=Azure+Data+Factory+Image" alt="Azure Data Factory Dashboard Image" className="mt-4 rounded-md shadow-md w-full h-auto" />
+            {/* Corrected alt text */}
+            <img src="https://placehold.co/400x200/E0F2FE/0284C7?text=Azure+Data+Factory+Dashboard" alt="Azure Data Factory Dashboard" className="mt-4 rounded-md shadow-md w-full h-auto" />
           </div>
           <div className="p-4 bg-purple-50 rounded-lg shadow-sm">
             <h5 className="font-bold text-lg text-purple-800 mb-2">Frontend and BI</h5>
@@ -108,7 +110,8 @@ function FeaturedProject() {
               <li><strong className="font-medium">Power BI:</strong> Embedded dashboards for data analysis.</li>
               <li><strong className="font-medium">Multi-Tenant Management:</strong> Configuration per establishment.</li>
             </ul>
-            <img src="https://placehold.co/400x200/E0F2FE/0284C7?text=Power+BI+Dashboards+Image" alt="Power BI Dashboards Image" className="mt-4 rounded-md shadow-md w-full h-auto" />
+            {/* Corrected alt text */}
+            <img src="https://placehold.co/400x200/E0F2FE/0284C7?text=Power+BI+Dashboards" alt="Power BI Dashboards" className="mt-4 rounded-md shadow-md w-full h-auto" />
           </div>
         </div>
 
