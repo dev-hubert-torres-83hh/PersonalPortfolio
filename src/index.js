@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; // Importa ReactDOM para renderizar la aplicación
-import './index.css'; // Importa el archivo CSS global (si lo tienes, para estilos base o Tailwind CSS)
+//import './index.css'; // Importa el archivo CSS global (si lo tienes, para estilos base o Tailwind CSS)
 import App from './App'; // Importa el componente principal de tu aplicación
 
 // Crea una raíz de renderizado concurrente para tu aplicación React
