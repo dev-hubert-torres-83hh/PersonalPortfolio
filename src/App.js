@@ -88,7 +88,7 @@ function FeaturedProject() {
             <h5 className="font-bold text-lg text-blue-800 mb-2">IoT and Hardware</h5>
             <ul className="list-disc list-inside text-sm space-y-1">
               <li><strong className="font-medium">Raspberry Pi:</strong> Automatic control devices.</li>
-              <li><strong className="font-medium">Sensores de Peso:</strong> For real-time inventory monitoring.</li>
+              <li><strong className="font-medium">Weight Sensors:</strong> For real-time inventory monitoring.</li>
             </ul>
             {/* Corrected alt text */}
             <img src="https://placehold.co/400x200/E0F2FE/0284C7?text=Raspberry+Pi+Device" alt="Raspberry Pi Device with Sensors" className="mt-4 rounded-md shadow-md w-full h-auto" />
