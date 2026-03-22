@@ -173,13 +173,25 @@ function Skills() {
 function Experience() {
   const experienceData = [
     {
+      title: "Data Engineer & Full-Stack Developer",
+      company: "SCALATER",
+      location: "Austin, Texas",
+      dates: "February 2024 to Present",
+      description: [
+        "Architected and implemented high-performance ETL/ELT pipelines in Databricks using Python/PySpark and Azure Data Factory for orchestration.",
+        "Developed custom data ingestion and transformation logic entirely in Python to manage real-time streams from Raspberry Pi and weight sensors.",
+        "Optimized PySpark code and configured Spark clusters within Databricks to ensure high-throughput and fault-tolerant data delivery.",
+        "Led the full-stack development of Laundry Metric an Azure-based IoT system (.NET - API, Angular - frontend)",
+      ],
+    },
+    {
       title: "Senior Business Intelligence (BI) Developer",
       company: "inswitch",
       location: "Montevideo, Uruguay",
       dates: "August 2017 – February 2024",
       description: [
         "Spearheaded the implementation and architectural design of Looker as the primary BI platform, managing enterprise-scale data modeling and dashboard delivery.",
-        "Expertly developed complex LookML models, including persistent derived tables (PDTs), advanced joins, and liquid parameters to optimize query performance and provide dynamic data exploration.",
+        "Expertly developed complex LookML models, including persistent derived tables (PDTs), advanced joins, and liquid parameters.",
         "Established Looker version control and development workflows using Git, ensuring data consistency across multiple business units.",
         "Designed and implemented sophisticated Data Warehouse solutions (Looker, Power BI, Tableau), significantly improving strategic decision-making visibility.",
       ],
