@@ -178,8 +178,10 @@ function Experience() {
       location: "Montevideo, Uruguay",
       dates: "August 2017 – February 2024",
       description: [
-        "Designed, developed, and implemented Data Warehouse and BI solutions (Power BI, Looker, Tableau), improving business visibility.",
-        "Led the implementation of data pipelines in Azure Cloud, ensuring CI/CD with Azure DevOps, Docker, and Kubernetes.",
+        "Spearheaded the implementation and architectural design of Looker as the primary BI platform, managing enterprise-scale data modeling and dashboard delivery.",
+        "Expertly developed complex LookML models, including persistent derived tables (PDTs), advanced joins, and liquid parameters to optimize query performance and provide dynamic data exploration.",
+        "Established Looker version control and development workflows using Git, ensuring data consistency across multiple business units.",
+        "Designed and implemented sophisticated Data Warehouse solutions (Looker, Power BI, Tableau), significantly improving strategic decision-making visibility.",
       ],
     },
     {
