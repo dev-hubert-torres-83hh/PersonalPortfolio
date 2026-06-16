@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Main App Component
 function App() {
@@ -20,10 +20,9 @@ function Header() {
   return (
     <header className="text-center mb-16">
       <div className="mb-6">
-        {/* Profile Image - Corrected alt text */}
         <img
-          src="screenshot_1.jpg" // Using the provided image filename
-          alt="Hubert Torres Pozo" // Removed 'Imagen'
+          src="screenshot_1.jpg"
+          alt="Hubert Torres Pozo"
           className="w-40 h-40 rounded-full mx-auto object-cover shadow-lg border-4 border-white"
         />
       </div>
@@ -31,16 +30,29 @@ function Header() {
         Hubert Torres Pozo
       </h1>
       <p className="text-xl sm:text-2xl text-gray-700 mb-6">
-        Software Engineer | Data Solutions | Full-Stack Developer
+        Senior Data Engineer | Python &amp; PySpark | Looker Tech Lead
       </p>
       <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-        Over 15 years of experience in software development and data analysis, specializing in building and optimizing robust data engineering solutions and enterprise applications. Expert in the Azure ecosystem, Full-Stack development with <strong className="font-semibold">.NET and Angular</strong>, and the creation of innovative <strong className="font-semibold">IoT-based systems</strong> for automation and data-driven decision-making. Proven ability to drive operational efficiency and cost reduction through advanced technological solutions.
+        Data Engineer with 15 years in software development, focused on Python/PySpark pipelines
+        and Looker BI at scale. The last several years have been in Azure's Data Lakehouse stack —
+        Databricks, Azure Data Factory, Delta Lake — building pipelines that hold up under production
+        loads. On the BI side, I led Looker's full implementation at inswitch for nearly 7 years,
+        from LookML data modeling to Git-based governance workflows across multiple business units.
+        I've shipped in production across 3 continents.
       </p>
       <div className="mt-8 flex justify-center space-x-4">
-        <a href="https://www.linkedin.com/in/hubert-torres-pozo-250538127" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-400 shadow-lg hover:opacity-90 transition-opacity">
+        <a
+          href="https://www.linkedin.com/in/hubert-torres-pozo-250538127"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-400 shadow-lg hover:opacity-90 transition-opacity"
+        >
           View LinkedIn
         </a>
-        <a href="mailto:hubertornadot@gmail.com" className="inline-block px-6 py-3 rounded-xl font-semibold text-white bg-gray-700 shadow-lg hover:bg-gray-800 transition-colors">
+        <a
+          href="#contact"
+          className="inline-block px-6 py-3 rounded-xl font-semibold text-white bg-gray-700 shadow-lg hover:bg-gray-800 transition-colors"
+        >
           Contact Me
         </a>
       </div>
@@ -57,27 +69,31 @@ function FeaturedProject() {
       </h2>
       <div className="bg-white p-8 rounded-3xl shadow-xl max-w-6xl mx-auto">
         <h3 className="text-3xl font-semibold text-gray-800 mb-6">
-          Laundry Metric: Revolution in Smart Linen Management
+          Laundry Metric: IoT Linen Management System
         </h3>
         <p className="text-lg text-gray-700 mb-6">
-          I led the development of <strong className="font-semibold">"Laundry Metric"</strong>, a comprehensive IoT and cloud-based system designed to automate and optimize linen management in hotels and other establishments. This project demonstrates my ability to merge data engineering, full-stack development, and IoT solutions to solve complex business problems.
+          I built <strong className="font-semibold">"Laundry Metric"</strong> — an IoT and
+          cloud-based system that automates linen tracking in hotels and hospitality businesses.
+          The stack runs on Raspberry Pi weight sensors feeding real-time data into an Azure
+          Data Lakehouse, with a .NET API backend, Angular frontend, and Power BI dashboards
+          for operations teams.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
-            <h4 className="text-2xl font-semibold text-gray-800 mb-4">The Challenge Solved</h4>
+            <h4 className="text-2xl font-semibold text-gray-800 mb-4">The Problem</h4>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li><strong className="font-semibold">Linen Loss and Misplacement:</strong> Reduction of hidden costs and frequent replacement needs.</li>
-              <li><strong className="font-semibold">Inaccurate Inventory:</strong> Lack of real-time stock knowledge, leading to shortages or excesses.</li>
-              <li><strong className="font-semibold">Operational Inefficiency:</strong> Time and resources dedicated to manual counting and tracking tasks.</li>
+              <li><strong className="font-semibold">Linen Loss:</strong> Hidden costs from misplaced items and frequent replacements.</li>
+              <li><strong className="font-semibold">No Real-Time Inventory:</strong> Manual counts led to shortages and excess stock.</li>
+              <li><strong className="font-semibold">Manual Tracking:</strong> Staff time wasted on counting tasks that sensors can handle.</li>
             </ul>
           </div>
           <div>
-            <h4 className="text-2xl font-semibold text-gray-800 mb-4">Key Impact and Achievements</h4>
+            <h4 className="text-2xl font-semibold text-gray-800 mb-4">Results</h4>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li>Achieved an <strong className="font-semibold">estimated 20% reduction in linen inventory losses</strong>, optimizing operational efficiency.</li>
-              <li>Engineered ETL/ELT pipelines with Azure Data Factory and Databricks, resulting in a <strong className="font-semibold">75% reduction in data processing time</strong>.</li>
-              <li>Provided <strong className="font-semibold">real-time inventory visibility</strong>, enhancing strategic decision-making.</li>
+              <li><strong className="font-semibold">~20% reduction</strong> in linen inventory losses.</li>
+              <li>ETL/ELT pipelines (Azure Data Factory + Databricks) cut data processing time by <strong className="font-semibold">75%</strong>.</li>
+              <li>Operations teams got <strong className="font-semibold">real-time inventory visibility</strong> for the first time.</li>
             </ul>
           </div>
         </div>
@@ -88,39 +104,36 @@ function FeaturedProject() {
             <h5 className="font-bold text-lg text-blue-800 mb-2">IoT and Hardware</h5>
             <ul className="list-disc list-inside text-sm space-y-1">
               <li><strong className="font-medium">Raspberry Pi:</strong> Automatic control devices.</li>
-              <li><strong className="font-medium">Weight Sensors:</strong> For real-time inventory monitoring.</li>
+              <li><strong className="font-medium">Weight Sensors:</strong> Real-time inventory monitoring.</li>
             </ul>
-            {/* Corrected alt text */}
             <img src="https://placehold.co/400x200/E0F2FE/0284C7?text=Raspberry+Pi+Device" alt="Raspberry Pi Device with Sensors" className="mt-4 rounded-md shadow-md w-full h-auto" />
           </div>
           <div className="p-4 bg-green-50 rounded-lg shadow-sm">
             <h5 className="font-bold text-lg text-green-800 mb-2">Backend and Cloud</h5>
             <ul className="list-disc list-inside text-sm space-y-1">
-              <li><strong className="font-medium">.NET 8 API:</strong> Backend microservice.</li>
+              <li><strong className="font-medium">.NET API:</strong> Backend microservice.</li>
               <li><strong className="font-medium">Azure Kubernetes:</strong> Cluster for microservices.</li>
-              <li><strong className="font-medium">Microsoft SQL Server (Serverless):</strong> OLTP and DWH databases.</li>
+              <li><strong className="font-medium">SQL Server (Serverless):</strong> OLTP and DWH databases.</li>
             </ul>
-            {/* Corrected alt text */}
             <img src="https://placehold.co/400x200/E0F2FE/0284C7?text=Azure+Data+Factory+Dashboard" alt="Azure Data Factory Dashboard" className="mt-4 rounded-md shadow-md w-full h-auto" />
           </div>
           <div className="p-4 bg-purple-50 rounded-lg shadow-sm">
             <h5 className="font-bold text-lg text-purple-800 mb-2">Frontend and BI</h5>
             <ul className="list-disc list-inside text-sm space-y-1">
-              <li><strong className="font-medium">Angular 16:</strong> Frontend web application.</li>
+              <li><strong className="font-medium">Angular:</strong> Frontend web application.</li>
               <li><strong className="font-medium">Power BI:</strong> Embedded dashboards for data analysis.</li>
-              <li><strong className="font-medium">Multi-Tenant Management:</strong> Configuration per establishment.</li>
+              <li><strong className="font-medium">Multi-Tenant:</strong> Configuration per establishment.</li>
             </ul>
-            {/* Corrected alt text */}
             <img src="https://placehold.co/400x200/E0F2FE/0284C7?text=Power+BI+Dashboards" alt="Power BI Dashboards" className="mt-4 rounded-md shadow-md w-full h-auto" />
           </div>
         </div>
 
-        <h4 className="text-2xl font-semibold text-gray-800 mb-4">Competitive Advantage</h4>
+        <h4 className="text-2xl font-semibold text-gray-800 mb-4">What Made It Work</h4>
         <ul className="list-disc list-inside text-gray-700 space-y-2">
-          <li><strong className="font-semibold">IoT Innovation:</strong> Real-time weight sensors for unparalleled accuracy.</li>
-          <li><strong className="font-semibold">Cutting-Edge Technology:</strong> Robust and scalable Azure infrastructure.</li>
-          <li><strong className="font-semibold">Powerful Data Analytics:</strong> Power BI dashboards transform data into actionable business intelligence.</li>
-          <li><strong className="font-semibold">Intuitive User Experience:</strong> Modern and easy-to-use web application.</li>
+          <li><strong className="font-semibold">Weight sensors over manual counts:</strong> Real-time accuracy without staff involvement.</li>
+          <li><strong className="font-semibold">Azure-native stack:</strong> Databricks + Data Factory handled the data volume without custom infrastructure.</li>
+          <li><strong className="font-semibold">Power BI embedded:</strong> Operations managers got dashboards inside the app, not a separate BI tool.</li>
+          <li><strong className="font-semibold">Multi-tenant from day one:</strong> Each hotel location configured independently.</li>
         </ul>
       </div>
     </section>
@@ -131,16 +144,17 @@ function FeaturedProject() {
 function Skills() {
   const skillsData = {
     "Data Engineering & BI": [
-      "Azure Data Factory", "Azure Databricks", "Azure Synapse Analytics", "Azure Data Lake",
-      "Microsoft Azure SQL Database", "Azure Cosmos DB", "Power BI", "Tableau", "SQL",
-      "Oracle", "PostgreSQL", "Statistics", "ETL/ELT", "Dimensional Data Modeling", "Data Warehousing"
+      "Python", "PySpark", "Looker / LookML", "Azure Databricks", "Azure Data Factory",
+      "Azure Synapse Analytics", "Azure Data Lake", "Azure SQL Database", "Azure Cosmos DB",
+      "Power BI", "Tableau", "SQL", "PostgreSQL", "Oracle",
+      "ETL/ELT", "Dimensional Modeling", "Data Warehousing", "Statistics"
     ],
     "Full-Stack Development & Cloud": [
-      ".NET", "C#", "Angular", "JavaScript", "APIs", "Kubernetes", "Docker", "Microservices",
-      "Azure Cloud", "IoT (Raspberry Pi, Weight Sensors)"
+      ".NET", "C#", "Angular", "JavaScript", "APIs", "Kubernetes", "Docker",
+      "Microservices", "Azure Cloud", "IoT (Raspberry Pi, Weight Sensors)"
     ],
     "Other Languages & Tools": [
-      "Python", "Java", "C++", "Git", "MySQL", "HDInsight"
+      "Java", "C++", "Git", "MySQL", "HDInsight", "HDInsight"
     ]
   };
 
@@ -174,52 +188,52 @@ function Experience() {
   const experienceData = [
     {
       title: "Data Engineer & Full-Stack Developer",
-      company: "SCALATER",
-      location: "Austin, Texas",
-      dates: "February 2024 to Present",
+      company: "SCALATER (Contract)",
+      location: "Austin, TX",
+      dates: "Feb 2024 – Present",
       description: [
-        "Architected and implemented high-performance ETL/ELT pipelines in Databricks using Python/PySpark and Azure Data Factory for orchestration.",
-        "Developed custom data ingestion and transformation logic entirely in Python to manage real-time streams from Raspberry Pi and weight sensors.",
-        "Optimized PySpark code and configured Spark clusters within Databricks to ensure high-throughput and fault-tolerant data delivery.",
-        "Led the full-stack development of Laundry Metric an Azure-based IoT system (.NET - API, Angular - frontend)",
+        "Built ETL/ELT pipelines in Databricks (Python/PySpark + Azure Data Factory) to process high-frequency IoT time-series data — cut processing time by 75%.",
+        "Wrote Python ingestion and transformation logic for real-time streams from Raspberry Pi and weight sensors, feeding a centralized Azure Data Lakehouse.",
+        "Tuned PySpark code and Spark cluster configs in Databricks to keep the pipeline reliable from raw ingestion through to the consumption layer.",
+        "Led full-stack development of \"Laundry Metric\" — an Azure IoT system (.NET API, Angular frontend) that automated linen tracking and cut inventory losses by ~20%.",
       ],
     },
     {
-      title: "Senior Business Intelligence (BI) Developer",
+      title: "Senior Business Intelligence Developer",
       company: "inswitch",
       location: "Montevideo, Uruguay",
-      dates: "August 2017 – February 2024",
+      dates: "Aug 2017 – Feb 2024",
       description: [
-        "Spearheaded the implementation and architectural design of Looker as the primary BI platform, managing enterprise-scale data modeling and dashboard delivery.",
-        "Expertly developed complex LookML models, including persistent derived tables (PDTs), advanced joins, and liquid parameters.",
-        "Established Looker version control and development workflows using Git, ensuring data consistency across multiple business units.",
-        "Designed and implemented sophisticated Data Warehouse solutions (Looker, Power BI, Tableau), significantly improving strategic decision-making visibility.",
+        "Looker Tech Lead: Designed and rolled out Looker as the company's primary BI platform, owning the data model architecture and dashboard delivery end-to-end.",
+        "LookML: Built complex models with PDTs, advanced joins, and Liquid parameters to speed up queries and give analysts more flexibility in exploration.",
+        "Data Governance: Set up Git-based version control and development workflows for Looker, keeping data definitions consistent across multiple business units.",
+        "BI Stack: Built Data Warehouse reporting across Looker, Power BI, and Tableau for different internal teams.",
       ],
     },
     {
       title: "Full Stack Developer",
       company: "ArkanoSoft",
       location: "Montevideo, Uruguay",
-      dates: "October 2016 – August 2017",
+      dates: "Oct 2016 – Aug 2017",
       description: [
-        "Developed enterprise applications based on Microsoft .NET.",
-        "Analyzed user requirements and translated client needs into application designs.",
+        "Built enterprise .NET applications across the full project lifecycle, from requirements through delivery.",
+        "Worked directly with clients to understand their needs and translate them into application designs.",
       ],
     },
     {
-      title: "University Lecturer and System Developer",
+      title: "University Lecturer & System Developer",
       company: "Methodist University of Angola",
       location: "Angola",
-      dates: "February 2013 – June 2016",
+      dates: "Feb 2013 – Jun 2016",
       description: [
         "Taught courses and developed applications in Artificial Intelligence, Computer Decision Support Systems, and Distributed Systems.",
       ],
     },
     {
       title: "Developer",
-      company: "Software Development Center - CEDESA",
+      company: "CEDESA",
       location: "Santiago de Cuba, Cuba",
-      dates: "September 2010 – January 2013",
+      dates: "Sep 2010 – Jan 2013",
       description: [
         "Developed SCADA applications in C++ and enterprise applications in Java (Hibernate + Spring).",
       ],
@@ -235,7 +249,7 @@ function Experience() {
         {experienceData.map((job, index) => (
           <div key={index}>
             <h3 className="text-2xl font-semibold text-gray-800">{job.title}</h3>
-            <p className="text-lg text-gray-600">{job.company} - {job.location} | {job.dates}</p>
+            <p className="text-lg text-gray-600">{job.company} · {job.location} | {job.dates}</p>
             <ul className="list-disc list-inside text-gray-700 space-y-1 mt-2">
               {job.description.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -260,20 +274,21 @@ function EducationCertifications() {
   ];
 
   const certificationsData = [
-    "The Business Intelligence Analyst Course 2025 - April 2025 – Present",
-    "Inferential Statistics for Machine Learning with R and Python - March 2025 – Present",
-    "Azure Data Engineer Technologies for Beginners [Bundle] - February 2025 – Present",
-    "Unit Testing in .Net - December 2024 – Present",
-    "FullStack Application in Angular and Net - October 2024 – Present",
-    "Mastering LookML: Looker's Modeling Language - February 2021 – Present",
-    "Complete Power BI Course for Data Analysis - August 2020 – Present",
-    "Tableau A-Z: Data Analytics Training - August 2020 – Present",
+    "The Business Intelligence Analyst Course — Apr 2025",
+    "Inferential Statistics for Machine Learning with R and Python — Mar 2025",
+    "Azure Data Engineer Technologies for Beginners [Bundle] — Feb 2025",
+    "Unit Testing in .NET — Dec 2024",
+    "FullStack Application in Angular and .NET — Oct 2024",
+    "Mastering LookML: Looker's Modeling Language (Udemy) — Feb 2021",
+    "LookML Foundations / Getting Started with LookML / Building Reports in Looker (Google Cloud) — Dec 2020 – Jan 2021",
+    "Complete Power BI Course for Data Analysis — Aug 2020",
+    "Tableau A-Z: Data Analytics Training — Aug 2020",
   ];
 
   return (
     <section className="mb-16">
       <h2 className="text-4xl font-bold text-gray-900 text-center mb-10">
-        Education & Certifications
+        Education &amp; Certifications
       </h2>
       <div className="bg-white p-8 rounded-3xl shadow-xl max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
@@ -282,14 +297,14 @@ function EducationCertifications() {
             {educationData.map((edu, index) => (
               <li key={index}>
                 <strong className="font-semibold">{edu.degree}</strong><br />
-                {edu.university} - {edu.location}<br />
+                {edu.university} — {edu.location}<br />
                 <em>{edu.dates}</em>
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">Certifications & Licenses</h3>
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">Certifications</h3>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
             {certificationsData.map((cert, index) => (
               <li key={index}>{cert}</li>
@@ -301,23 +316,70 @@ function EducationCertifications() {
   );
 }
 
+// Obfuscated contact data (char codes, reversed)
+// To decode: reverse array, map charCodeAt back to char
+const _e = [109,111,99,46,108,105,97,109,103,64,116,111,100,97,110,114,111,116,114,101,98,117,104].reverse();
+const _p = [49,53,49,56,49,53,51,55,51,55,49,43].reverse();
+
+function decode(arr) {
+  return arr.map(c => String.fromCharCode(c)).join('');
+}
+
 // Contact Section Component
 function ContactSection() {
+  const [emailRevealed, setEmailRevealed] = useState(false);
+  const [phoneRevealed, setPhoneRevealed] = useState(false);
+
   return (
-    <section className="text-center mb-16">
+    <section id="contact" className="text-center mb-16">
       <h2 className="text-4xl font-bold text-gray-900 mb-10">
         Contact Me
       </h2>
       <div className="bg-white p-8 rounded-3xl shadow-xl max-w-2xl mx-auto">
         <p className="text-lg text-gray-700 mb-6">
-          I am seeking challenging opportunities in Austin, TX, where I can apply my expertise in data engineering, full-stack development, and innovative solutions to drive your organization's success.
+          Based in Austin, TX. Open to Senior Data Engineer and BI Lead roles —
+          remote or hybrid. Feel free to reach out directly.
         </p>
-        <p className="text-xl font-semibold text-gray-800 mb-4">
-          Email: <a href="mailto:hubertornadot@gmail.com" className="text-blue-600 hover:underline">hubertornadot@gmail.com</a>
-        </p>
-        <p className="text-xl font-semibold text-gray-800">
-          Phone: +17373518151
-        </p>
+
+        <div className="space-y-4">
+          <div className="flex items-center justify-center gap-3">
+            <span className="text-xl font-semibold text-gray-800">Email:</span>
+            {emailRevealed ? (
+              <a
+                href={`mailto:${decode(_e)}`}
+                className="text-blue-600 hover:underline text-xl"
+              >
+                {decode(_e)}
+              </a>
+            ) : (
+              <button
+                onClick={() => setEmailRevealed(true)}
+                className="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors font-medium"
+              >
+                Click to reveal email
+              </button>
+            )}
+          </div>
+
+          <div className="flex items-center justify-center gap-3">
+            <span className="text-xl font-semibold text-gray-800">Phone:</span>
+            {phoneRevealed ? (
+              <a
+                href={`tel:${decode(_p)}`}
+                className="text-blue-600 hover:underline text-xl"
+              >
+                {decode(_p)}
+              </a>
+            ) : (
+              <button
+                onClick={() => setPhoneRevealed(true)}
+                className="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors font-medium"
+              >
+                Click to reveal phone
+              </button>
+            )}
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -332,4 +394,4 @@ function Footer() {
   );
 }
 
-export default App; // Export the main App component
+export default App;
