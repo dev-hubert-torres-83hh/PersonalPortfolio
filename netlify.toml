@@ -3,6 +3,9 @@
   publish = "build"
   # base = "" # Deja esto vacío o coméntalo si tu proyecto está en la raíz del repo
 
+[build.environment]
+  DISABLE_ESLINT_PLUGIN = "true"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

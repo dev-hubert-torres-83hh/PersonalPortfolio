@@ -83,17 +83,17 @@ function FeaturedProject() {
           <div>
             <h4 className="text-2xl font-semibold text-gray-800 mb-4">The Problem</h4>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li><strong className="font-semibold">Linen Loss:</strong> Hidden costs from misplaced items and frequent replacements.</li>
-              <li><strong className="font-semibold">No Real-Time Inventory:</strong> Manual counts led to shortages and excess stock.</li>
-              <li><strong className="font-semibold">Manual Tracking:</strong> Staff time wasted on counting tasks that sensors can handle.</li>
+              <li>Linen kept disappearing, and every lost item was a replacement cost nobody had budgeted for.</li>
+              <li>Nobody had a real-time view of stock, so the team was stuck guessing between shortages and excess.</li>
+              <li>Staff lost hours every week to manual counts, exactly the kind of task sensors handle better.</li>
             </ul>
           </div>
           <div>
             <h4 className="text-2xl font-semibold text-gray-800 mb-4">Results</h4>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li><strong className="font-semibold">~20% reduction</strong> in linen inventory losses.</li>
-              <li>ETL/ELT pipelines (Azure Data Factory + Databricks) cut data processing time by <strong className="font-semibold">75%</strong>.</li>
-              <li>Operations teams got <strong className="font-semibold">real-time inventory visibility</strong> for the first time.</li>
+              <li>Linen inventory losses dropped by about <strong className="font-semibold">20%</strong>.</li>
+              <li>ETL/ELT pipelines on Databricks and Azure Data Factory cut data processing time by <strong className="font-semibold">75%</strong>.</li>
+              <li>For the first time, operations teams could see inventory levels change in real time instead of waiting on a manual count.</li>
             </ul>
           </div>
         </div>
@@ -103,26 +103,26 @@ function FeaturedProject() {
           <div className="p-4 bg-blue-50 rounded-lg shadow-sm">
             <h5 className="font-bold text-lg text-blue-800 mb-2">IoT and Hardware</h5>
             <ul className="list-disc list-inside text-sm space-y-1">
-              <li><strong className="font-medium">Raspberry Pi:</strong> Automatic control devices.</li>
-              <li><strong className="font-medium">Weight Sensors:</strong> Real-time inventory monitoring.</li>
+              <li>Raspberry Pi units handle automatic control at each station.</li>
+              <li>Weight sensors track inventory changes as they happen, no manual counts needed.</li>
             </ul>
             <img src="https://placehold.co/400x200/E0F2FE/0284C7?text=Raspberry+Pi+Device" alt="Raspberry Pi Device with Sensors" className="mt-4 rounded-md shadow-md w-full h-auto" />
           </div>
           <div className="p-4 bg-green-50 rounded-lg shadow-sm">
             <h5 className="font-bold text-lg text-green-800 mb-2">Backend and Cloud</h5>
             <ul className="list-disc list-inside text-sm space-y-1">
-              <li><strong className="font-medium">.NET API:</strong> Backend microservice.</li>
-              <li><strong className="font-medium">Azure Kubernetes:</strong> Cluster for microservices.</li>
-              <li><strong className="font-medium">SQL Server (Serverless):</strong> OLTP and DWH databases.</li>
+              <li>A .NET API runs the core backend microservice.</li>
+              <li>Azure Kubernetes hosts and scales that cluster.</li>
+              <li>SQL Server, running serverless, covers both the OLTP and warehouse workloads.</li>
             </ul>
             <img src="https://placehold.co/400x200/E0F2FE/0284C7?text=Azure+Data+Factory+Dashboard" alt="Azure Data Factory Dashboard" className="mt-4 rounded-md shadow-md w-full h-auto" />
           </div>
           <div className="p-4 bg-purple-50 rounded-lg shadow-sm">
             <h5 className="font-bold text-lg text-purple-800 mb-2">Frontend and BI</h5>
             <ul className="list-disc list-inside text-sm space-y-1">
-              <li><strong className="font-medium">Angular:</strong> Frontend web application.</li>
-              <li><strong className="font-medium">Power BI:</strong> Embedded dashboards for data analysis.</li>
-              <li><strong className="font-medium">Multi-Tenant:</strong> Configuration per establishment.</li>
+              <li>Angular powers the web frontend.</li>
+              <li>Power BI dashboards are embedded directly in the app, not bolted on as a separate tool.</li>
+              <li>Each hotel location runs its own multi-tenant configuration.</li>
             </ul>
             <img src="https://placehold.co/400x200/E0F2FE/0284C7?text=Power+BI+Dashboards" alt="Power BI Dashboards" className="mt-4 rounded-md shadow-md w-full h-auto" />
           </div>
@@ -130,10 +130,10 @@ function FeaturedProject() {
 
         <h4 className="text-2xl font-semibold text-gray-800 mb-4">What Made It Work</h4>
         <ul className="list-disc list-inside text-gray-700 space-y-2">
-          <li><strong className="font-semibold">Weight sensors over manual counts:</strong> Real-time accuracy without staff involvement.</li>
-          <li><strong className="font-semibold">Azure-native stack:</strong> Databricks + Data Factory handled the data volume without custom infrastructure.</li>
-          <li><strong className="font-semibold">Power BI embedded:</strong> Operations managers got dashboards inside the app, not a separate BI tool.</li>
-          <li><strong className="font-semibold">Multi-tenant from day one:</strong> Each hotel location configured independently.</li>
+          <li>Weight sensors beat manual counts on accuracy, and nobody has to stand there counting.</li>
+          <li>Going all-in on Azure (Databricks plus Data Factory) meant no custom infrastructure to handle the data volume.</li>
+          <li>Embedding Power BI directly in the app kept operations managers from opening a separate BI tool.</li>
+          <li>Building multi-tenant from day one let each hotel location run independently, without extra engineering later.</li>
         </ul>
       </div>
     </section>
