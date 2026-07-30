@@ -147,14 +147,20 @@ function Skills() {
       "Python", "PySpark", "Looker / LookML", "Azure Databricks", "Azure Data Factory",
       "Azure Synapse Analytics", "Azure Data Lake", "Azure SQL Database", "Azure Cosmos DB",
       "Power BI", "Tableau", "SQL", "PostgreSQL", "Oracle",
-      "ETL/ELT", "Dimensional Modeling", "Data Warehousing", "Statistics"
+      "ETL/ELT", "Dimensional Modeling", "Data Warehousing", "Statistics", "AI-Assisted Analytics (NL-to-Query)"
+    ],
+    "Applied AI / GenAI Engineering": [
+      "LLMs (GPT-4, Claude, Gemini)", "Prompt Engineering", "RAG Architecture",
+      "Vector Embeddings & Semantic Search", "AI Agents & Tool-Calling",
+      "No-Code Orchestration (n8n, Make, Zapier)", "Multimodal AI (OCR, Whisper)",
+      "AI Governance (EU AI Act, GDPR)"
     ],
     "Full-Stack Development & Cloud": [
       ".NET", "C#", "Angular", "JavaScript", "APIs", "Kubernetes", "Docker",
       "Microservices", "Azure Cloud", "IoT (Raspberry Pi, Weight Sensors)"
     ],
     "Other Languages & Tools": [
-      "Java", "C++", "Git", "MySQL", "HDInsight", "HDInsight"
+      "Java", "C++", "Git", "MySQL", "HDInsight"
     ]
   };
 
@@ -164,7 +170,7 @@ function Skills() {
         Technical Skills
       </h2>
       <div className="bg-white p-8 rounded-3xl shadow-xl max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {Object.entries(skillsData).map(([category, skills]) => (
             <div key={category}>
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">{category}</h3>
@@ -266,6 +272,12 @@ function Experience() {
 function EducationCertifications() {
   const educationData = [
     {
+      degree: "Master's Degree in Applied AI and Optimization of Production Processes, Artificial Intelligence",
+      university: "Visual Business School",
+      location: "",
+      dates: "April 2026 – October 2026",
+    },
+    {
       degree: "Computer Science Engineer",
       university: "Universidad de Oriente",
       location: "Santiago de Cuba, Cuba",
@@ -297,7 +309,7 @@ function EducationCertifications() {
             {educationData.map((edu, index) => (
               <li key={index}>
                 <strong className="font-semibold">{edu.degree}</strong><br />
-                {edu.university} — {edu.location}<br />
+                {edu.location ? `${edu.university} — ${edu.location}` : edu.university}<br />
                 <em>{edu.dates}</em>
               </li>
             ))}
